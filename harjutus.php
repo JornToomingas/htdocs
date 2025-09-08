@@ -17,6 +17,28 @@
 </div>
 
 
+<?php
+    $pildid = array("prentice.jpg","freeland.jpg", "peterus.jpg", "devlin.jpg", "gabriel.jpg")
+?>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="/img/<?php echo $pildid[2];  ?>" alt="">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <?php
+                    foreach ($pildid as $pilt)  {
+                        echo ' <img src=/img/'.$pilt.'" alt="">';
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+
+
     <h1>Harjutus 05</h1>
 
 <?php
@@ -30,8 +52,6 @@
     echo"pikim riik on: ".$pikimriik."<br>";
 
     ?>
-
-
 
     <form action="#">
         Eemalda firma: <input type = "text" name= "eemalda">
@@ -77,7 +97,6 @@ $vins = array(
 "1N6AA0EDXFN868772", "WBADW3C59DJ422810");
 
 
-
 echo "Autosid: ".count($cars)."<br>";
 echo "VINid: ".count($vins)."<br>";
 if (count($cars)==count($vins)) {
@@ -108,7 +127,6 @@ foreach ($vins as $vin) {
 }
 
 ?>
-
 
 
 <?php
@@ -149,7 +167,6 @@ foreach ($vins as $vin) {
         }
 
     ?>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
